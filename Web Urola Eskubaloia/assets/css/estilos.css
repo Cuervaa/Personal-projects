@@ -1,0 +1,828 @@
+:root {
+    --azul: #1E3A8A;
+    --negro: #000000;
+    --amarillo: #F2C400;
+    --gris-header: #f2f2f2c2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0;
+    background: var(--azul);
+}
+
+/* ================= HEADER ================= */
+
+header {
+    background: var(--azul);
+    padding: 15px 40px;
+}
+
+.navbar {
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+nav a.active {
+    background: var(--amarillo);
+    color: #000000;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+.cta-socio {
+    border: 2px solid var(--amarillo);
+    color: var(--amarillo);
+    padding: 6px 16px;
+    border-radius: 25px;
+    font-weight: 600;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    background: #000000c0;
+    position: relative;
+    min-height: 40vh;
+    overflow: hidden;
+}
+
+.hero-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 60px 40px 0 40px;
+    /* espacio para el logo */
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    text-align: center;
+}
+
+/* ===== LOGO HERO ===== */
+
+.hero-logo {
+    width: 160px;
+    margin-bottom: 20px;
+    margin: 0 auto 25px auto;
+    display: block;
+}
+
+.hero-logo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===== TEXTO HERO ===== */
+
+.hero-text {
+    color: #fff;
+    max-width: 600px;
+    margin-top: -20px;
+}
+
+.hero-text h1 {
+    font-size: 64px;
+    font-weight: 300;
+    line-height: 1.1;
+}
+
+.hero-text h1 span {
+    font-weight: 800;
+}
+
+.hero-text p {
+    color: var(--amarillo);
+    margin: 20px 0 35px 0;
+    font-size: 18px;
+}
+
+.hero-text .btn {
+    display: inline-block;
+    border: 2px solid #fff;
+    padding: 14px 30px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* ===== IMAGEN JUGADORES ===== */
+
+.hero-image {
+    align-self: flex-end;
+}
+
+.hero-image img {
+    max-height: 480px;
+    display: block;
+}
+
+/* ===== ONDAS DECORATIVAS ===== */
+/*.hero::before {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: url('ondas.png') repeat-x bottom center;
+    background-size: contain;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: url('ondas.png') repeat-x bottom center;
+    background-size: contain;
+    transform: scaleY(-1);
+} */
+/* ================= SECCIÓN GENERAL ================= */
+
+.section {
+    background: #ffffff;
+    padding: 80px 0;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+/* ================= NEWS ================= */
+
+.news-section {
+    background: #ffffff;
+    padding: 80px 0;
+}
+
+.news-container {
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 40px;
+}
+
+.news-container h2 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+
+.news-card {
+    min-width: 350px;
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    scroll-snap-align: start;
+}
+
+.news-card:hover {
+    transform: translateY(-8px);
+}
+
+.news-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.news-content {
+    padding: 20px;
+}
+
+.news-content h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.news-content p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.news-content a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #000;
+}
+/* ===== BOTÓN VER MÁS NOTICIAS ===== */
+
+.news-more {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.btn-news-more {
+    display: inline-block;
+    padding: 14px 36px;
+    border-radius: 30px;
+    background: var(--amarillo);
+    color: #000000;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-news-more:hover {
+    background: var(--azul);
+    color: white;
+    transform: translateY(-3px);
+}
+/* ================= PATROCINADORES ================= */
+
+/* ===== SECCIÓN BASE ===== */
+
+.sponsors {
+    position: relative;
+    background: linear-gradient(var(--azul), #ffd000c4),
+        url('bg-sponsors.jpg') center/cover no-repeat;
+    padding: 50px 0 90px 0;
+}
+
+.sponsors-inner {
+    max-width: 1400px;
+    margin: auto;
+    padding: 0 60px;
+    text-align: center;
+}
+
+/* ===== TÍTULO ===== */
+
+.sponsors-title {
+    color: #fff;
+    font-size: 38px;
+    font-weight: 800;
+    margin-bottom: 80px;
+    position: relative;
+}
+
+.sponsors-title::after {
+    content: "";
+    width: 80px;
+    height: 3px;
+    background: var(--amarillo);
+    display: block;
+    margin: 18px auto 0 auto;
+}
+
+/* ===== PRINCIPALES ===== */
+
+.sponsors-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+    margin-bottom: 80px;
+}
+
+.sponsors-main img {
+    max-height: 120px;  /* mucho más grandes */
+    transition: 0.3s ease;
+}
+
+/* ===== SECUNDARIOS ===== */
+
+.sponsors-secondary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 80px;
+}
+
+.sponsors-secondary img {
+    max-height: 90px;
+    opacity: 0.85;
+    transition: 0.3s ease;
+}
+
+/* ===== HOVER ===== */
+
+.sponsors-main img:hover,
+.sponsors-secondary img:hover {
+    transform: scale(1.08);
+    opacity: 1;
+}
+
+/* Contenedor interno (nuevo) */
+.sponsors-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 40px;
+    text-align: center;
+}
+
+/* ===== TÍTULO ===== */
+
+.sponsors-title {
+    color: #ffffff;
+    font-size: 45px;
+    font-weight: 800;
+    margin-bottom: 70px;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.sponsors-title::after {
+    content: "";
+    width: 80px;
+    height: 3px;
+    background: var(--amarillo);
+    display: block;
+    margin: 18px auto 0 auto;
+    border-radius: 3px;
+}
+
+/* ===== LOGOS ===== */
+
+.sponsors-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 80px;
+}
+
+.sponsors-container img {
+    max-height: 60px;
+    opacity: 0.85;
+    transition: all 0.3s ease;
+}
+
+.sponsors-container img:hover {
+    opacity: 1;
+    transform: scale(1.08);
+}
+/* ===== ANIMACIÓN BASE ===== */
+
+.sponsors-main img,
+.sponsors-secondary img {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+/* Estado visible */
+
+.sponsors-main img.visible,
+.sponsors-secondary img.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+    background: #eeeeee;
+    padding-top: 60px;
+}
+
+.footer-top {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.footer-top img {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+.footer-top h3 {
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons a {
+    width: 45px;
+    height: 45px;
+    background: var(--azul);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: var(--amarillo);
+    transform: translateY(-3px);
+}
+
+/* ================= FOOTER BOTTOM ================= */
+
+.footer-bottom {
+    border-top: 1px solid #ddd;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 14px;
+}
+
+.footer-bottom .legal {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-bottom a {
+    color: #666;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    color: #000;
+}
+
+/* ===== WRAPPER ===== */
+
+.news-wrapper {
+    position: relative;
+    overflow: hidden;
+    padding: 0 60px; /* espacio para las flechas */
+}
+
+/* ===== OCULTAR SCROLLBAR ===== */
+
+.news-carousel {
+    display: flex;
+    gap: 30px;
+    transition: transform 0.6s ease-in-out;
+    will-change: transform;
+}
+
+/* ===== FLECHAS ===== */
+
+.news-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    background: var(--azul);
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.news-arrow:hover {
+    background: var(--amarillo);
+    color: #000;
+    transform: translateY(-50%) scale(1.08);
+}
+
+.news-arrow.prev {
+    left: 10px;   /* dentro del wrapper */
+}
+
+.news-arrow.next {
+    right: 10px;  /* dentro del wrapper */
+}
+/* ================= RESULTADO================= */
+
+.results-section {
+    background: #f7f7f7;
+    padding: 100px 0;
+}
+
+.results-container {
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+.results-container h2 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 70px;
+    font-weight: 700;
+}
+
+.results-grid {
+    display: flex;
+    gap: 30px;
+}
+
+.result-card {
+    flex: 1;                 /* todas ocupan el mismo espacio */
+    min-width: 0;            /* evita desbordamientos */
+    background: #f9f9f9;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.result-card:hover {
+    transform: translateY(-8px);
+}
+
+.result-league {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--azul);
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.result-match {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.team {
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+.team span {
+    font-size: 14px;
+    line-height: 1.2;
+    text-align: center;
+    word-break: break-word;
+}
+
+.team img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    display: block;
+}
+
+.score {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.score strong {
+    font-size: 40px;
+}
+
+.vs {
+    font-weight: 800;
+    font-size: 24px;
+    color: var(--amarillo);
+}
+
+.result-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    font-size: 14px;
+    color: #666;
+}
+
+.badge {
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* ESTADOS */
+.result-card.victoria .badge {
+    background: #d4edda;
+    color: #1e7e34;
+}
+
+.result-card.derrota .badge {
+    background: #f8d7da;
+    color: #a71d2a;
+}
+
+.result-card.empate .badge {
+    background: #ffe8cc;
+    color: #cc7000;
+}
+
+.next-match {
+    border: 2px solid var(--amarillo);
+}
+
+.upcoming-badge {
+    background: var(--amarillo);
+    color: #000;
+}
+
+/* ===== BOTÓN VER MÁS RESULTADOS ===== */
+
+.results-more {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.btn-results-more {
+    display: inline-block;
+    padding: 14px 36px;
+    border-radius: 30px;
+    background: var(--amarillo);
+    color: #000000;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-results-more:hover {
+    background: var(--azul);
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+
+/* ================= Pagina Noticias================= */
+
+/* ===== HERO INTERNO ===== */
+.page-hero {
+    background: #000000c0;
+    color: #fff;
+    padding: 100px 0 80px 0;
+    text-align: center;
+}
+
+.page-hero-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 40px;
+}
+
+.page-hero h1 {
+    font-size: 52px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.page-hero p {
+    font-size: 18px;
+    color: var(--amarillo);
+    opacity: 0.85;
+}
+.news-page {
+    background: #f7f7f7;
+    padding: 100px 0;
+}
+
+.news-page-container {
+    max-width: 1400px;
+    margin: auto;
+    padding: 0 60px;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+.news-category {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 15px;
+}
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* ===== COLORES POR CATEGORÍA ===== */
+
+.news-category.club {
+    background: var(--amarillo);
+    color: #000000;
+}
+.news-category.cantera {
+    background: rgb(190, 19, 19);
+    color: white;
+}
+.news-category.masculino {
+    background: #273e5f;
+    color: #fff;
+}
+.news-category.femenino {
+    background: #ec4899;
+    color: #fff;
+}
+
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1100px) {
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 1300px) {
+    .results-grid {
+        flex-wrap: wrap;
+    }
+
+    .result-card {
+        flex: 1 1 calc(50% - 40px);
+    }
+}
+
+@media (max-width: 700px) {
+    .result-card {
+        flex: 1 1 100%;
+    }
+}
+@media (max-width: 1100px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 220px;
+    }
+
+    .hero-logo {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .hero-text h1 {
+        font-size: 48px;
+    }
+
+    .hero-image {
+        margin-top: 50px;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+}
