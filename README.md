@@ -36,13 +36,13 @@ Me interesa crear soluciones bien estructuradas, visualmente limpias y técnicam
 ## 📂 Proyectos
 
 ### 🏐 Web Club Deportivo
-Desarrollo de una web en WordPress orientada a socios, equipos y público general.
+Desarrollo de una web en HTML orientada a socios, equipos y público general.
 
 **Trabajo realizado:**
 - Personalización avanzada de CSS  
 - Ajustes responsive  
 - Organización de contenido  
-- Configuración de entorno local  
+- Configuración de entorno local y remoto
 - Resolución de errores técnicos (servidor, base de datos, puertos, etc.)  
 
 ---
